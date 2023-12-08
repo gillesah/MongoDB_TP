@@ -1,6 +1,5 @@
 from pymongo import MongoClient
-import connexion
-from connexion import movies_dict, db
+from module.connexion import movies_dict, db
 
 directors = db["directors"]
 
@@ -15,6 +14,6 @@ for movie in movies_dict:
         movies_by_director[director].add(title)
     else:
         movies_by_director[director] = {title}
-## pour insérer dans la collection, merci de décommenter ces lignes :
+# pour insérer dans la collection, merci de décommenter ces lignes :
 # for director, movies in movies_by_director.items():
 #     directors.insert_one({"director": director, "movies": list(movies)})
