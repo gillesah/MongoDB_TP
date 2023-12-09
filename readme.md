@@ -1,6 +1,15 @@
 # Diginamic : TP Films IMDB
 
-_Afin d'éviter les doublons dans la base de donnée, les lignes de création de collections etc ont été commentées_
+_Afin d'éviter les doublons dans la base de donnée, les lignes de création de collections etc ont été commentées_ Le projet est disponible sur [Github](https://github.com/gillesah/MongoDB_TP)
+
+## Utilisation
+
+1 - installer Pymongo (voir [requirements](requirements.txt)) 2 - Executer les fichiers individuellement ou 3 - executer le fichier main
+
+```
+python main.py
+
+```
 
 ## Étape 1: Importer les données
 
@@ -26,7 +35,7 @@ Pour créer une collection director, vous pouvez run le fichier [ module/directo
 - [Les 5 réalisateurs ayant le plus de films](agregation/ag_3.py)
 - [la liste et le nombre de films des 15 acteurs les plus présents](agregation/ag_4.py)
 
-_en raison de problèmes avec VS Code j'ai du rajouter les lignes de connexions_
+_en raison de problèmes avec VS Code j'ai du rajouter les lignes de connexions qui sont commentées_
 
 ```
 client = MongoClient("mongodb://localhost:27017/")
@@ -36,5 +45,5 @@ db = client["cinema"]
 movies = db["movies"]
 ```
 
-_mais il est possible d'utiliser l'importation qui devrait fonctionner normalement_  
+_mais en dehors de VS code l'importation fonctionne avec : _  
 ` from module.connexion import movies`
