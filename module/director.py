@@ -21,7 +21,7 @@ class Director:
                 try:
                     rate_list.append(float(movie["Rating"]))
                 except ValueError:
-                    pass
+                    return "ce réalisateur n'a pas de note"
             if self.name.lower() in movie["Director"].lower():
                 rate_list.append(movie["Rating"])
         if rate_list:
